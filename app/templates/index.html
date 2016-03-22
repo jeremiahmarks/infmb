@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}CIA{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Welcome to the {% if appname %}{{ appname }}{% else %}Upload Tool!{% endif %}!</h1>
+    <p>Please put in your application name and API key below.</p>
+    <p>As a reminder, your appname is generally two letters and three numbers,
+       but it will always come before the ".infusionsoft.com" part of the URL
+       when you log in.
+    </p>
+    <p>
+        Additionally, you can find your API key at
+        “https://appname.infusionsoft.com/app/miscSetting/itemWrapper?systemId=nav.admin&settingModuleName=Application&settingTabName=Application“.
+    </p>
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}

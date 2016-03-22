@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Export Companies{% endblock %}
+
+{% block page_content %}
+{{ super() }}
+    <div>
+        From within Infusionsoft, please navigate to https://appname.infusionsoft.com/app/nav/link?navSystem=nav.crm&navModule=company
+        do a search for all companies, and then export the results to csv.
+        After you have exported it, please let me know by clicking the "next" button.
+    </div>
+{{ wtf.quick_form(form) }}
+{% endblock %}

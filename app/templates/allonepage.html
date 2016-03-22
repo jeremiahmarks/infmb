@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}CIA{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Welcome to the File Attacher!</h1>
+    <p>Please put in your application name and API key below.</p>
+    <p>As a reminder, your appname is generally two letters and three numbers,
+       but it will always come before the ".infusionsoft.com" part of the URL
+       when you log in.
+    </p>
+</div>
+<div>
+  <form method="POST">
+    <table>
+      {% if app %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setapp"></td></tr>
+      {% else %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setapp"></td></tr>
+      {% endif %}
+
+
+      {% if apikey %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setapikey"></td></tr>
+      {% else %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setapikey"></td></tr>
+      {% endif %}
+
+
+      {% if accountCSV %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setaccountCSV"></td></tr>
+      {% else %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setaccountCSV"></td></tr>
+      {% endif %}
+
+
+      {% if attachmentCSV %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setattachmentCSV"></td></tr>
+      {% else %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setattachmentCSV"></td></tr>
+      {% endif %}
+
+
+      {% if companyexport %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setcompanyexport"></td></tr>
+      {% else %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setcompanyexport"></td></tr>
+      {% endif %}
+
+
+      {% if filesfolder %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setfilesfolder"></td></tr>
+      {% else %}
+        <tr><td>Apples</td><td><input type="submit" name="btn" value="setfilesfolder"></td></tr>
+      {% endif %}
+
+
+    </table>
+    <input type="submit" name="btn" value="VerifyAndUpload">
+  </form>
+</div>
+{% endblock %}
